@@ -34,7 +34,7 @@ if (!$profile) {
             <h1> Kommentarer</h1>
             <div class="button-container">
             <div class="button-container">
-            <a href="casino.php">Spela</a>
+            <a href="weather.php">Spela</a>
             <a href="profile.php">Profil</a>
             <a href="index.php">Hem</a>
         </div>

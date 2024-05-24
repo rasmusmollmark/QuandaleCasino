@@ -7,7 +7,7 @@ if (loginCorrect($namn, $lösenord) && !empty($namn)) {
     session_start();
     $_SESSION['USERID'] = getUserID($namn, $lösenord); // Assuming you uncomment getUserID function
     $_SESSION['CURRENCY'] = getUserCurrency($_SESSION['USERID']);
-    header("Location: ./profile.php");
+    header("Location: ./index.php");
     exit();
 } else {
     echo "Inlogg misslyckades!";
