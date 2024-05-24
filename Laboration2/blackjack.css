@@ -1,7 +1,7 @@
 body, html {
     height: 100%; /* Changed to 100% */
     margin: 0;
-    background-color: green;
+    background-color: black;
 }
 
 .center-flex {
@@ -11,7 +11,7 @@ body, html {
     align-items: center;
     justify-content: center; 
     position: relative; 
-    padding-top: 122px;
+    padding-top: 125px;
 }
 
 
