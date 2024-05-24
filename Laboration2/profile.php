@@ -49,10 +49,14 @@ if (!$profile) {
         <img src="profilepic.png" alt="Profile picture">
         <ul> 
             <li>
-                <h3> Username: <?php echo htmlspecialchars($profile['username']); ?> </h3>
+                <h3> Användarnamn: <?php echo htmlspecialchars($profile['username']); ?> </h3>
             </li>
             <li>
-                <h3> Currency: <?php echo htmlspecialchars($profile['currency']); ?> </h3>
+                <h3> Spelvaluta: <?php echo htmlspecialchars($profile['currency']); ?> </h3>
+            </li>
+            <li>
+            <button id="fillButton" onclick="navigateTo('refil.php')">Fyll på valuta</button>
+            </a>
             </li>
         </ul>
     </article>
