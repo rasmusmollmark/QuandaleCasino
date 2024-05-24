@@ -34,18 +34,16 @@ if (!$profile) {
 <body>
 
 <aside id="topbar">
-        <div class="topbar-container">
-            <img src="NyaQuandale.gif" alt="Qandale Casino Logo" class="topbar-logo" href="./index.php">
-            <h1> Kommentarer</h1>
-            <div class="button-container">
-            <div class="button-container">
-            <a href="casino.php">Spela</a>
-            <a href="profile.php">Profil</a>
-            <a href="index.php">Hem</a>
-        </div>
-            </div>
-        </div>
-    </aside>
+       <div class="topbar-container">
+           <img src="NyaQuandale.gif" alt="Qandale Casino Logo" class="topbar-logo" href="./index.php">
+           <h1> Profil </h1>
+           <div class="button-container">
+               <button onclick="navigateTo('casino.php')">Spela</button>
+               <button onclick="navigateTo('profile.php')">Profil</button>
+               <button onclick="navigateTo('index.php')">Hem</button>
+           </div>
+       </div>
+   </aside>
 
     <article id="profileBox">
         <img src="profilepic.png" alt="Profile picture">
