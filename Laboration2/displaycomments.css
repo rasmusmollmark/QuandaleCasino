@@ -14,8 +14,9 @@ body, html {
     align-items: center;
     box-sizing: border-box;
     padding: 60px 0;
-    top: 0px;
-    position: absolute;
+    position: fixed; 
+    top: 0;
+    z-index: 1000; 
 }
 
 .topbar-container {
@@ -39,24 +40,24 @@ h1 {
 .topbar-logo {
     max-height: 150px;
     position: absolute;
-    top: 80%; /* Position at the bottom of the top bar */
-    left: 20px; /* Adjust position as needed */
-    transform: translateY(-10%); /* Move up by half its height */
+    top: 80%; 
+    left: 20px; 
+    transform: translateY(-10%); 
     border-radius: 80px;
 }
 
 .button-container {
     display: flex;
     gap: 20px;
-    right: 20px; /* Align buttons to the right */
+    right: 20px; 
     position: absolute;
-    top: 50%; /* Center vertically */
+    top: 50%; 
     transform: translateY(-50%);
 }
 
 .button-container button {
     height: 40px;
-    padding: 10px 20px; /* Adjust padding for better appearance */
+    padding: 10px 20px; 
     font-size: 16px;
     cursor: pointer;
     background-color: rgb(0, 0, 0);
@@ -64,6 +65,7 @@ h1 {
     border-radius: 20px;
     color: white;
     text-decoration: none;
+    font-family: 'Times New Roman', Times, serif;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -74,7 +76,7 @@ h1 {
     max-width: 800px;
     margin: 20px auto;
     padding: 20px;
-    padding-top: 180px; /* Add space between the top bar and comment section */
+    margin-top: 160px; 
     background: white;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
