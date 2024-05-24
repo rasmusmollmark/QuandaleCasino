@@ -13,6 +13,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="blackjack.css">
     <title>Hemsida</title>
+    <script>
+       function navigateTo(url) {
+           window.location.href = url;
+       }
+   </script>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script>
@@ -247,9 +252,9 @@
     }
 
     function playAgain() {
-        $('#button-container').children().last().remove();
+        $('#bj-button-container').children().last().remove();
         $('#result').children().last().remove();
-        $('#button-container').append('<button id="blackjack_button" onclick="playBlackjack()" >Spela blackjack</button>');
+        $('#bj-button-container').append('<button id="blackjack_button" onclick="playBlackjack()" >Spela blackjack</button>');
         resetGame();
     }
 
@@ -266,7 +271,7 @@
         let winnings = getPlayerWinnings(playerWon, push);
         updateCurrency(winnings);
         toggleGameButtons(false);
-        $('#button-container').append('<button id="playagain_button" onclick="playAgain()">Spela igen</button>');
+        $('#bj-button-container').append('<button id="playagain_button" onclick="playAgain()">Spela igen</button>');
         $('#playagain_button').show();
         playerBet = 0;
         playerScore = 0;
@@ -325,19 +330,19 @@
 </head>
 <body>
     <?php if(isset($_SESSION['USERID'])): ?>
+        <aside id="topbar">
+       <div class="topbar-container">
+           <img src="NyaQuandale.gif" alt="Qandale Casino Logo" class="topbar-logo" href="./index.php">
+           <h1> Kommentarer</h1>
+           <div class="button-container">
+               <button onclick="navigateTo('casino.php')">Spela</button>
+               <button onclick="navigateTo('profile.php')">Profil</button>
+               <button onclick="navigateTo('index.php')">Hem</button>
+           </div>
+       </div>
+   </aside>
+
         <div class="center-flex" id="container">
-            <div id="website-buttons">
-            <a href="./displaycomments.php">
-                <button style="font-size:25px;background-color: aquamarine; border-radius: 10px;">Kommentarer</button>
-            </a>
-            <a href="./index.php">
-                <button style="font-size:25px;background-color: aquamarine; border-radius: 10px;">Hemsida</button>
-            </a>
-            <a href="./logOut.php">
-                <button style="font-size:25px;background-color: aquamarine; border-radius: 10px;">Logga ut</button>
-            </a>
-            </div>
-            
             <div id="top">
             
             </div>
@@ -354,14 +359,13 @@
                 </div>
                 <div id="money"></div>
             </div>
-            <div id="button-container">
+            <div id="bj-button-container">
                 <button id="blackjack_button" onclick="playBlackjack()" >Spela blackjack</button>
                 <button id="hit-button" onclick="playerHit(false)" style="display: none;">Hit</button>
                 <button id="double-button" onclick="playerHit(true)" style="display: none;">Double</button>
                 <button id="stay-button" onclick="stay()" style="display: none;">Stay</button>
                 <button id="playagain_button" onclick="playAgain()" style="display:none;">Spela igen</button>
             </div>
-            <img src="NyaQuandale.gif" alt="Top Right Image" id="top-right-image">
         </div>
     <?php else: ?>
         <section>
