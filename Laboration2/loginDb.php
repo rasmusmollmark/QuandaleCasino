@@ -2,50 +2,49 @@
 $namn = $_POST['username'];
 $lösenord = $_POST['password'];
 
-
-if(loginCorrect($namn,$lösenord) && !empty($namn)){
+if (loginCorrect($namn, $lösenord) && !empty($namn)) {
     session_set_cookie_params(0);
     session_start();
-    $_SESSION['USERID'] = getUserID($namn,$lösenord);
-    $_SESSION['CURRENCY'] = getUserCurrency();
-    header("Location: ./index.php");
+    $_SESSION['USERID'] = getUserID($namn, $lösenord); // Assuming you uncomment getUserID function
+    $_SESSION['CURRENCY'] = getUserCurrency($_SESSION['USERID']);
+    header("Location: ./profile.php");
     exit();
-}
-else{
+} else {
     echo "Inlogg misslyckades!";
 }
 
-function loginCorrect($namn,$lösenord){
-$db = new SQLite3 ("./db/database.db");
-$result = $db -> query('SELECT username, password FROM User');
-while($person = $result -> fetchArray()){
-    if(strcmp($namn, $person['username']) == 0 && password_verify($lösenord, $person['password'])){
-        return true;
-    }
-}
-return false;
+function loginCorrect($namn, $lösenord) {
+    $db = new SQLite3("./db/database.db");
+    $stmt = $db->prepare('SELECT username, password FROM User WHERE username = :username');
+    $stmt->bindValue(':username', $namn, SQLITE3_TEXT);
+    $result = $stmt->execute();
+    $person = $result->fetchArray();
+    return $person && password_verify($lösenord, $person['password']);
 }
 
-function getUserID($namn,$lösenord){
-    $db = new SQLite3 ("./db/database.db");
-$result = $db -> query('SELECT userID, username, password FROM User');
-while($person = $result -> fetchArray()){
-    if(strcmp($namn, $person['username']) == 0 && password_verify($lösenord, $person['password'])){
+function getUserID($namn, $lösenord) {
+    $db = new SQLite3("./db/database.db");
+    $stmt = $db->prepare('SELECT userID, password FROM User WHERE username = :username');
+    $stmt->bindValue(':username', $namn, SQLITE3_TEXT);
+    $result = $stmt->execute();
+    $person = $result->fetchArray();
+    if ($person && password_verify($lösenord, $person['password'])) {
         return $person['userID'];
+    } else {
+        return null;
     }
 }
-return "";
 
-}
-
-function getUserCurrency(){
-    $db = new SQLite3 ("./db/database.db");
-$result = $db -> query('SELECT currency, userID FROM User');
-while($person = $result -> fetchArray()){
-    if(strcmp($person['userID'], $_SESSION['USERID']) == 0){
+function getUserCurrency($userID) {
+    $db = new SQLite3("./db/database.db");
+    $stmt = $db->prepare('SELECT currency FROM User WHERE userID = :userID');
+    $stmt->bindValue(':userID', $userID, SQLITE3_TEXT);
+    $result = $stmt->execute();
+    $person = $result->fetchArray();
+    if ($person) {
         return $person['currency'];
+    } else {
+        return null;
     }
 }
-return 0;
-}
-?> 
+?>

@@ -1,3 +1,23 @@
+<?php
+session_start();
+
+if (!isset($_SESSION['USERID'])) {
+    die("You are not logged in.");
+}
+
+$user_id = $_SESSION['USERID'];
+
+$db = new SQLite3("./db/database.db");
+$stmt = $db->prepare('SELECT username, currency FROM User WHERE userID = :userID');
+$stmt->bindValue(':userID', $user_id, SQLITE3_INTEGER);
+$result = $stmt->execute();
+$profile = $result->fetchArray(SQLITE3_ASSOC);
+
+if (!$profile) {
+    die("User profile not found.");
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,27 +28,29 @@
 </head>
 <body>
 
-    <aside id="topbar">
-        <h2>Qandale <br> Casino</h2>
-       
-        <div class="button-container">
-            <button><a href="index.php">Startsida</a></button>
-            <button><a href="casino.php">Spela</a></button>
-            <button><a href="link3">Om oss</a></button>
+<aside id="topbar">
+        <div class="topbar-container">
+            <img src="NyaQuandale.gif" alt="Qandale Casino Logo" class="topbar-logo" href="./index.php">
+            <h1> Kommentarer</h1>
+            <div class="button-container">
+            <div class="button-container">
+            <a href="casino.php">Spela</a>
+            <a href="profile.php">Profil</a>
+            <a href="index.php">Hem</a>
+        </div>
+            </div>
         </div>
     </aside>
 
     <article id="profileBox">
-            <img src="background.jpg" alt="Profile picture">
-            <ul> 
-                <li>
-                    <h3> Name: (Name) </h3>
-                </li>
+        <img src="profilepic.png" alt="Profile picture">
+        <ul> 
             <li>
-                <h3> Age: (Age) </h3>
+                <h3> Username: <?php echo htmlspecialchars($profile['username']); ?> </h3>
             </li>
             <li>
-                <h3> Email: (Email) </h3>
+                <h3> Currency: <?php echo htmlspecialchars($profile['currency']); ?> </h3>
+            </li>
         </ul>
     </article>
 </body>
