@@ -207,7 +207,7 @@ body, html {
  .button-container {
     display: flex;
     gap: 20px;
-    right: 20px;
+    right: 0px;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);

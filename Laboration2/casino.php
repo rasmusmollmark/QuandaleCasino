@@ -333,11 +333,12 @@
         <aside id="topbar">
        <div class="topbar-container">
            <img src="NyaQuandale.gif" alt="Qandale Casino Logo" class="topbar-logo" href="./index.php">
-           <h1> Kommentarer</h1>
+           <h1> Blackjack</h1>
            <div class="button-container">
-               <button onclick="navigateTo('casino.php')">Spela</button>
-               <button onclick="navigateTo('profile.php')">Profil</button>
+               <button onclick="navigateTo('displaycomments.php')">Kommentarer</button>
                <button onclick="navigateTo('index.php')">Hem</button>
+               <button onclick="navigateTo('profile.php')">Profil</button>
+               <button onclick="navigateTo('logOut.php')">Logga ut</button>
            </div>
        </div>
    </aside>
