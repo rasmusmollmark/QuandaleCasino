@@ -18,7 +18,7 @@
             <img src="NyaQuandale.gif" alt="Qandale Casino Logo" class="topbar-logo" href="./index.php">
             <h1> Kommentarer</h1>
             <div class="button-container">
-                <button onclick="navigateTo('casino.php')">Spela</button>
+                <button onclick="navigateTo('weather.php')">Spela</button>
                 <button onclick="navigateTo('profile.php')">Profil</button>
                 <button onclick="navigateTo('index.php')">Hem</button>
             </div>
