@@ -25,6 +25,11 @@ if (!$profile) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile</title>
     <link rel="stylesheet" href="profile.css">
+    <script>
+       function navigateTo(url) {
+           window.location.href = url;
+       }
+   </script>
 </head>
 <body>
 
@@ -34,7 +39,7 @@ if (!$profile) {
             <h1> Kommentarer</h1>
             <div class="button-container">
             <div class="button-container">
-            <a href="weather.php">Spela</a>
+            <a href="casino.php">Spela</a>
             <a href="profile.php">Profil</a>
             <a href="index.php">Hem</a>
         </div>
