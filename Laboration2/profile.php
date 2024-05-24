@@ -25,22 +25,25 @@ if (!$profile) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile</title>
     <link rel="stylesheet" href="profile.css">
+    <script>
+       function navigateTo(url) {
+           window.location.href = url;
+       }
+   </script>
 </head>
 <body>
 
 <aside id="topbar">
-        <div class="topbar-container">
-            <img src="NyaQuandale.gif" alt="Qandale Casino Logo" class="topbar-logo" href="./index.php">
-            <h1> Kommentarer</h1>
-            <div class="button-container">
-            <div class="button-container">
-            <a href="casino.php">Spela</a>
-            <a href="profile.php">Profil</a>
-            <a href="index.php">Hem</a>
-        </div>
-            </div>
-        </div>
-    </aside>
+       <div class="topbar-container">
+           <img src="NyaQuandale.gif" alt="Qandale Casino Logo" class="topbar-logo" href="./index.php">
+           <h1> Profil </h1>
+           <div class="button-container">
+               <button onclick="navigateTo('casino.php')">Spela</button>
+               <button onclick="navigateTo('profile.php')">Profil</button>
+               <button onclick="navigateTo('index.php')">Hem</button>
+           </div>
+       </div>
+   </aside>
 
     <article id="profileBox">
         <img src="profilepic.png" alt="Profile picture">

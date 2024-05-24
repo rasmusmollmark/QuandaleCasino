@@ -18,63 +18,86 @@ body {
     width: 100%;
     background-color: #800020;
     color: white;
-    padding: 20px 0;
-    position: relative;
-
-}
-
-.topbar-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 60px 0;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+ }
+ 
+ 
+ .topbar-container {
+    width: 100%;
     max-width: 1200px;
-    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
-}
-
-h1 {
-    font-size: 28px;
-}
-
-.topbar-logo {
-    max-height: 80px;
-    border-radius: 50%;
-}
-
-.button-container {
+    position: relative;
+ }
+ 
+ 
+ h1 {
+    position: absolute;
+    font-size: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+ }
+ 
+ 
+ .topbar-logo {
+    max-height: 150px;
+    position: absolute;
+    top: 80%;
+    left: 20px;
+    transform: translateY(-10%);
+    border-radius: 80px;
+ }
+ 
+ 
+ .button-container {
     display: flex;
     gap: 20px;
-}
-
-.button-container button {
+    right: 20px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+ }
+ 
+ 
+ .button-container button {
     height: 40px;
-    padding: 0 20px;
+    padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
-    background-color: #000000;
+    background-color: rgb(0, 0, 0);
     border: none;
     border-radius: 20px;
     color: white;
-}
-
-.container {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
+    text-decoration: none;
+    font-family: 'Times New Roman', Times, serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid white;
+ }
+ 
 
 #profileBox {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center horizontally */
-    padding: 20px;
+    align-items: center; 
+    padding: 20px 20px 75px;
     border-radius: 10px;
     width: 350px;
-    margin: 20px auto; /* Center vertically and horizontally */
+    margin: 170px auto 30px; 
+    margin-top: 30 px;
     background-color: #188818;
+    border: 2px solid white;
 }
 
 #profileBox img {
@@ -82,9 +105,9 @@ h1 {
     height: 60%;
     border-radius: 50%;
     object-fit: cover;
-    border-radius: 1px;
-    border-color: black;
+    border: 2px solid white; /* Add border with 5px width and solid white color */
     margin-bottom: 10px;
+    background-color: white;
 }
 
 #profileBox ul {
@@ -94,14 +117,18 @@ h1 {
 
 #profileBox ul li {
     margin-bottom: 15px;
+    border: 5px;
+    
 }
 
 #profileBox ul li h3 {
-    margin: 0;
-    padding: 10px 20px;
+    margin: 20px;
+    padding: 10px 40px;
     font-size: 20px;
     font-weight: bold;
-    background-color: #ce2929;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #010101;
     border-radius: 50px;
-    color: white;
+    border: 2px solid white;
+    color: white; 
 }
