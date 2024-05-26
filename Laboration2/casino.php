@@ -329,7 +329,6 @@
     </script>
 </head>
 <body>
-    <?php if(isset($_SESSION['USERID'])): ?>
         <aside id="topbar">
        <div class="topbar-container">
            <img src="NyaQuandale.gif" alt="Qandale Casino Logo" class="topbar-logo" href="./index.php">
@@ -368,11 +367,5 @@
                 <button id="playagain_button" onclick="playAgain()" style="display:none;">Spela igen</button>
             </div>
         </div>
-    <?php else: ?>
-        <section>
-            <h2>DU ÄR INTE INLOGGAD</h2>
-            <button>Gå tillbaka</button>
-        </section>
-    <?php endif ?>
 </body>
 </html>

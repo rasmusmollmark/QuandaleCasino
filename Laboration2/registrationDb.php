@@ -16,8 +16,10 @@ $stmt -> bindParam (':currency', $currency, SQLITE3_TEXT);
 
 if ($stmt -> execute()) {
     $db -> close ();
+    session_set_cookie_params(0);
     session_start();
     $_SESSION['USERID'] = getUserID($namn,$lösenord);
+    $_SESSION['CURRENCY'] = getUserCurrency($_SESSION['USERID']);
     header("Location: ./index.php");
     exit();
     return true;
@@ -47,6 +49,19 @@ function validateInput($name,$mail,$comment){
 
 function validateMail($mail){
     return filter_var($mail, FILTER_VALIDATE_EMAIL); 
+    }
+
+    function getUserCurrency($userID) {
+        $db = new SQLite3("./db/database.db");
+        $stmt = $db->prepare('SELECT currency FROM User WHERE userID = :userID');
+        $stmt->bindValue(':userID', $userID, SQLITE3_TEXT);
+        $result = $stmt->execute();
+        $person = $result->fetchArray();
+        if ($person) {
+            return $person['currency'];
+        } else {
+            return null;
+        }
     }
 
 ?> 
