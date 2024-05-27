@@ -108,7 +108,7 @@ h1 {
     resize: vertical;
 }
 
-.commentbox button {
+.commentbox button, #search-button {
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
@@ -144,4 +144,20 @@ h1 {
 
 .home-button:hover {
     background: #8f8f8f;
+}
+
+#searchbar {
+    display: flex;
+    align-items: center;
+    right: 500px;
+    position: absolute;
+}
+
+#searchbar input[type="text"] {
+    padding: 8px; /* Adjust padding */
+    font-size: 16px;
+    border: 1px solid #4b2e83; /* Match border color with other elements */
+    border-radius: 5px; /* Match border radius */
+    margin-right: 5px; /* Add margin between input and button */
+    font-family: 'Times New Roman', Times, serif;
 }
