@@ -41,6 +41,7 @@ if (!$profile) {
                <button onclick="navigateTo('weather.php')">Spela</button>
                <button onclick="navigateTo('profile.php')">Profil</button>
                <button onclick="navigateTo('index.php')">Hem</button>
+               <button onclick="navigateTo('logOut.php')">Logga ut</button>
            </div>
        </div>
    </aside>

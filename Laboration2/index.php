@@ -25,11 +25,12 @@
         <aside id="topbar">
        <div class="topbar-container">
            <img src="NyaQuandale.gif" alt="Qandale Casino Logo" class="topbar-logo" href="./index.php">
-           <h1>Välkommen till Quandale Casino</h1>
+           <h1>Quandale Casino</h1>
            <div class="button-container">
                <button onclick="navigateTo('weather.php')">Spela</button>
                <button onclick="navigateTo('profile.php')">Profil</button>
                <button onclick="navigateTo('displaycomments.php')">Kommentarer</button>
+               <button onclick="navigateTo('logOut.php')">Logga ut</button>
            </div>
        </div>
    </aside>

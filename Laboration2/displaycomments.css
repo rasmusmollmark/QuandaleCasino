@@ -71,6 +71,7 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
+    border: 2px solid white;
 }
 
 /* Allt ovanför är topbar css kod*/

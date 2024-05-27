@@ -42,7 +42,7 @@ body {
 h1 {
     position: absolute;
     font-size: 45px;
-    left: 43%;
+    left: 50%;
     transform: translateX(-50%);
     margin: 0;
 }
@@ -59,7 +59,7 @@ h1 {
 .button-container {
     display: flex;
     gap: 20px;
-    right: 20px; 
+    right: 0px; 
     position: absolute;
     top: 50%; 
     transform: translateY(-50%);
@@ -74,6 +74,7 @@ h1 {
     border: none;
     border-radius: 20px;
     color: white;
+    border: 2px solid white;
     text-decoration: none;
     font-family: 'Times New Roman', Times, serif;
     display: flex;
