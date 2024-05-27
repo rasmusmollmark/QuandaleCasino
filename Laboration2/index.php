@@ -57,7 +57,7 @@
         <p>"Oslagbara spelupplevelse och ett engagerande kommentarsfält! "</p>
         <h4>- Rasmus Möllmark</h4>
     </div>
-    <!-- Add more testimonials as needed -->
+    
 </section>
 <div>  <p> <br> </p>  </div>
 
