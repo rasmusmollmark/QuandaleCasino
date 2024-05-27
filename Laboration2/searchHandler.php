@@ -6,7 +6,8 @@ if (!isset($_SESSION['USERID'])) {
 }
 
 if (!isset($_GET['search']) || empty($_GET['search'])) {
-    echo "FUCK YOU";
+    header('Content-Type: text/plain');
+echo ("Error recieve search");
     
 }
 
