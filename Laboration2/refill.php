@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Refill Currency</title>
-    <link rel="stylesheet" href="refil.css">
+    <link rel="stylesheet" href="refill.css">
     <script>
         function navigateTo(url) {
             window.location.href = url;
