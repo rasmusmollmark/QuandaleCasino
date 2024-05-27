@@ -1,8 +1,8 @@
 body, html {
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
     height: 100%;
+    background-image: url('./backgrund.jpg');
 }
 
 /*Härifrån tills nästa kommentar är topbarCSS kod*/
