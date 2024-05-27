@@ -25,7 +25,7 @@
         <aside id="topbar">
        <div class="topbar-container">
            <img src="NyaQuandale.gif" alt="Qandale Casino Logo" class="topbar-logo" href="./index.php">
-           <h1>Quandale Casino</h1>
+           <h1>Välkommen till Quandale Casino</h1>
            <div class="button-container">
                <button onclick="navigateTo('weather.php')">Spela</button>
                <button onclick="navigateTo('profile.php')">Profil</button>
@@ -39,7 +39,7 @@
     <div id="content">
         <section class="info-section">
             <h2>Meddelande från utvecklarna och investerarna</h2>
-            <p>Välkomna, ärade besökare, till världens främsta bettingsajt! <br> <br> Hos oss kan ni delta i ett av historiens mest klassiska spel, blackjack – ett spel som har bestått genom tidens alla prövningar, från kulturskiften till världskrig. Vår ambition är att, med hjälp av vår toppmoderna mjukvara, förflytta er i tid och rum till ett autentiskt casino, där varje insats känns lika verklig som i det fysiska livet. Utöver denna extraordinära upplevelse erbjuder vi också en levande och engagerande kommentarsfält, där ni kan ta del av både hettande debatter och underhållande konversationer. <br> <br>  Vi tackar ödmjukast för att ni valt oss och påminner er om att ingen kommer ihåg en fegis – så spela som om det inte fanns någon morgondag!</p>
+            <p>Välkomna, ärade besökare, till världens främsta bettingsajt! <br> <br> Hos oss kan ni delta i ett av historiens mest klassiska spel, blackjack – ett spel som har bestått genom tidens alla prövningar, från kulturskiften till världskrig. Vår ambition är att, med hjälp av vår toppmoderna mjukvara, förflytta er i tid och rum till ett autentiskt casino, där varje insats känns lika verklig som i det fysiska livet. Utöver denna extraordinära upplevelse erbjuder vi också en levande och engagerande kommentarsfält, där ni kan ta del av både hettande debatter och underhållande konversationer som rör hazardspelandets alla stora frågor. <br> <br>  Vi tackar ödmjukast för att ni valt oss och påminner er om att ingen kommer ihåg en fegis – så spela som om det inte finns någon morgondag!</p>
         </section>
         <section class="info-section">
             <h2>Lär dig spela Blackjack</h2>
@@ -51,11 +51,11 @@
     <h2>Vad våra kunder säger</h2>
     <div class="testimonial">
         <p>"Bästa casinot jag någonsin har spelat på. Fantastisk upplevelse!"</p>
-        <h4>- Maria S.</h4>
+        <h4>- Erik Fredriksson.</h4>
     </div>
     <div class="testimonial">
-        <p>"Oslagbara erbjudanden och en engagerande kommentarsfält."</p>
-        <h4>- Johan L.</h4>
+        <p>"Oslagbara spelupplevelse och ett engagerande kommentarsfält! "</p>
+        <h4>- Rasmus Möllmark</h4>
     </div>
     
 </section>
@@ -66,10 +66,10 @@
     <div class="footer-container">
         <p>&copy; 2024 Quandale Casino. All rights reserved.</p>
         <nav class="footer-nav">
-            <a href="about.php">Om Oss</a>
-            <a href="contact.php">Kontakt</a>
-            <a href="terms.php">Villkor</a>
-            <a href="privacy.php">Integritetspolicy</a>
+            <a href="https://www.youtube.com/watch?v=xvFZjo5PgG0&ab_channel=Duran">Om Oss</a>
+            <a href="https://www.youtube.com/watch?v=xvFZjo5PgG0&ab_channel=Duran">Kontakt</a>
+            <a href="https://www.youtube.com/watch?v=xvFZjo5PgG0&ab_channel=Duran">Villkor</a>
+            <a href="https://www.youtube.com/watch?v=xvFZjo5PgG0&ab_channel=Duran">Integritetspolicy</a>
         </nav>
     </div>
 

@@ -41,8 +41,8 @@ body {
 
 h1 {
     position: absolute;
-    font-size: 45px;
-    left: 50%;
+    font-size: 40px;
+    left: 49%;
     transform: translateX(-50%);
     margin: 0;
 }
@@ -58,8 +58,8 @@ h1 {
 
 .button-container {
     display: flex;
-    gap: 20px;
-    right: 0px; 
+    gap: 10px;
+    right: -80px; 
     position: absolute;
     top: 50%; 
     transform: translateY(-50%);
@@ -67,7 +67,7 @@ h1 {
 
 .button-container button {
     height: 40px;
-    padding: 10px 20px; 
+    padding: 10px 15px; 
     font-size: 16px;
     cursor: pointer;
     background-color: rgb(0, 0, 0);
@@ -80,6 +80,7 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
+   
 }
 
 #content {
@@ -138,18 +139,18 @@ h1 {
 .footer-section {
     background-color: #800020;
     color: white;
-    padding: 10px 0; /* Adjust padding to make the footer smaller in height */
+    padding: 10px 0; 
     text-align: center;
     position: fixed;
     bottom: 0;
     width: 100%;
     box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.1);
+    
 }
 
 .footer-container {
     max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
+    margin: 0px auto;
     flex-direction: column;
     align-items: center;
 }
