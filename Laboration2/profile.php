@@ -56,7 +56,7 @@ if (!$profile) {
                 <h3> Spelvaluta: <?php echo htmlspecialchars($profile['currency']); ?> </h3>
             </li>
             <li>
-            <button id="fillButton" onclick="navigateTo('refil.php')">Fyll på valuta</button>
+            <button id="fillButton" onclick="navigateTo('refill.php')">Fyll på valuta</button>
             </a>
             </li>
         </ul>
