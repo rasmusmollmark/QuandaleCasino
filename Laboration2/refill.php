@@ -40,9 +40,8 @@
         </li>
         <li>
             <form id="refillForm" method="post" action="refill.php">
-                <div class="form-label">Antal coins:</div>
-                <input type="number" id="amount" name="amount" required placeholder="Input here">
-                <button type="submit" id="fillButton">Refill</button>
+                <input type="number" id="amount" name="amount" required placeholder="Antal coins">
+                <button type="submit" id="fillButton">Fyll på</button>
             </form>
             <?php if (isset($error)) {
                 echo "<p style='color: red;'>$error</p>";
