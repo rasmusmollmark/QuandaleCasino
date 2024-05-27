@@ -56,7 +56,7 @@
         <p>"Oslagbara erbjudanden och en engagerande kommentarsfält."</p>
         <h4>- Johan L.</h4>
     </div>
-    <!-- Add more testimonials as needed -->
+    
 </section>
 <div>  <p> <br> </p>  </div>
 

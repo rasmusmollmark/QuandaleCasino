@@ -5,7 +5,7 @@ $lösenord = $_POST['password'];
 if (loginCorrect($namn, $lösenord) && !empty($namn)) {
     session_set_cookie_params(0);
     session_start();
-    $_SESSION['USERID'] = getUserID($namn, $lösenord); // Assuming you uncomment getUserID function
+    $_SESSION['USERID'] = getUserID($namn, $lösenord); 
     $_SESSION['CURRENCY'] = getUserCurrency($_SESSION['USERID']);
     header("Location: ./index.php");
     exit();
