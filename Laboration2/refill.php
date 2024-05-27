@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <?php 
+    session_start();
+
+    if (!isset($_SESSION['USERID'])) {
+        die("You are not logged in.");
+    }
+    ?>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Refill Currency</title>
@@ -29,10 +36,10 @@
     <img src="profilepic.png" alt="Profile picture">
     <ul> 
         <li>
-            <h3>Användarnamn: <?php echo htmlspecialchars($profile['username']); ?></h3>
+            <h3>Användarnamn: <?php echo $_SESSION['USERNAME']; ?></h3>
         </li>
         <li>
-            <form id="refillForm" method="post" action="profile.php">
+            <form id="refillForm" method="post" action="refill.php">
                 <div class="form-label">Antal coins:</div>
                 <input type="number" id="amount" name="amount" required placeholder="Input here">
                 <button type="submit" id="fillButton">Refill</button>
@@ -48,11 +55,7 @@
 
 
 <?php
-session_start();
 
-if (!isset($_SESSION['USERID'])) {
-    die("You are not logged in.");
-}
 
 $user_id = $_SESSION['USERID'];
 
