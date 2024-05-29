@@ -20,6 +20,7 @@ if ($stmt -> execute()) {
     session_start();
     $_SESSION['USERID'] = getUserID($namn,$lösenord);
     $_SESSION['CURRENCY'] = getUserCurrency($_SESSION['USERID']);
+    $_SESSION['USERNAME'] = $namn;
     header("Location: ./index.php");
     exit();
     return true;

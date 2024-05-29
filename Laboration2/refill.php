@@ -69,6 +69,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $stmt->bindValue(':userID', $user_id, SQLITE3_INTEGER);
         
         if ($stmt->execute()) {
+            $_SESSION['CURRENCY'] += $amount;
             header('Location: profile.php');
             exit;
         } else {
