@@ -8,10 +8,20 @@ if (loginCorrect($namn, $lösenord) && !empty($namn)) {
     $_SESSION['USERID'] = getUserID($namn, $lösenord); 
     $_SESSION['CURRENCY'] = getUserCurrency($_SESSION['USERID']);
     $_SESSION['USERNAME'] = $namn;
+    $_SESSION['ADMIN'] = isAdmin($_SESSION['USERID']);
     header("Location: ./index.php");
     exit();
 } else {
     echo "Inlogg misslyckades!";
+}
+
+function isAdmin($userID){
+    $db = new SQLite3("./db/database.db");
+    $stmt = $db->prepare('SELECT role FROM User WHERE userID = :userID');
+    $stmt->bindValue(':userID', $userID, SQLITE3_TEXT);
+    $result = $stmt->execute();
+    $person = $result->fetchArray();
+    return strcmp($person['role'], "admin") == 0;
 }
 
 function loginCorrect($namn, $lösenord) {
